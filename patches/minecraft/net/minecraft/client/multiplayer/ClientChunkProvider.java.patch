@@ -16,3 +16,11 @@
           return chunk;
        }
     }
+@@ -160,6 +162,7 @@
+    }
+ 
+    public void func_217201_a(LightType p_217201_1_, SectionPos p_217201_2_) {
++      net.minecraftforge.common.MinecraftForge.EVENT_BUS.post(new net.minecraftforge.client.event.LightUpdateEvent(getWorld(), type, pos));
+       Minecraft.func_71410_x().field_71438_f.func_215328_b(p_217201_2_.func_218149_a(), p_217201_2_.func_218163_b(), p_217201_2_.func_218148_c());
+    }
+ 
